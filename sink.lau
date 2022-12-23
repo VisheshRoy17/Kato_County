@@ -1,0 +1,14 @@
+local part = script.Parent
+local run = script.Parent.Parent.water
+
+script.Parent.Parent.water.Transparency = 1 --Script's Parent's Parent's Child's Transparency is set to 1 (invisible)
+script.Parent.Transparency = 1 --Script's Parent's Transparency is set to 1 (invisible)
+
+function onMouseClick() --Function to declare the code to be ran after the event
+	script.Parent.Parent.water.Transparency = 0
+	script.Sound:Play()
+	wait(15.41)
+	script.Parent.Parent.water.Transparency = 1
+end
+
+script.Parent.ClickDetector.MouseClick:Connect(onMouseClick) -- Connecting the event with the function
